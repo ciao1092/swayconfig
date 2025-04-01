@@ -28,7 +28,7 @@ set $menu "rofi -show drun -show-icons"
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/carlo/Pictures/neogeo-d-06d4d58298150da8d21f057cae641c964ae99d41.webp fill
 #
 # Example configuration:
 #
