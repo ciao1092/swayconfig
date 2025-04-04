@@ -7,7 +7,7 @@ exec dunst
 # To re-enable it, run a 'chmod +x' on it
 #exec --no-startup-id ~/.config/sway/scripts/start_keyring.sh
 
-font Adwaita Mono 11
+font UbuntuMono Nerd Font 12
 
 ### Variables
 #
@@ -23,7 +23,8 @@ set $right l
 set $term gnome-terminal
 # Your preferred application launcher
 #set $menu wmenu-run
-set $menu "rofi -show drun -show-icons"
+#set $menu "rofi -show drun -show-icons"
+set $menu "~/.config/rofi/launchers/type-1/launcher.sh"
 
 ### Output configuration
 #
@@ -77,6 +78,7 @@ input "1739:52759:SYNA32A9:00_06CB:CE17_Touchpad" {
 #
 # Basics:
 #
+bindsym $mod+Escape exec swaylock
     # Start a terminal
     bindsym $mod+Return exec $term
 
