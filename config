@@ -2,7 +2,7 @@
 
 # This has been disabled.
 # To re-enable it, run a 'chmod +x' on it
-#exec --no-startup-id ~/.config/sway/scripts/start_keyring.sh
+exec --no-startup-id ~/.config/sway/scripts/start_keyring.sh
 
 ### Variables
 #
