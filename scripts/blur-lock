@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# simple screenlocker using i3lock that creates ablurred screenshot to overlay
+
+PICTURE=/tmp/i3lock.png
+SCREENSHOT="grim $PICTURE"
+
+BLUR="-sample 10% -blur 0x2 -resize 1000%"
+
+$SCREENSHOT
+magick $PICTURE $BLUR $PICTURE
+swaylock -i $PICTURE
+shred $PICTURE
+rm $PICTURE
