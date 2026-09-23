@@ -9,6 +9,6 @@ BLUR="-sample 10% -blur 0x2 -resize 1000%"
 
 $SCREENSHOT
 magick $PICTURE $BLUR $PICTURE
-swaylock -i $PICTURE
+~/.local/usr/bin/swaylock -p -i $PICTURE --indicator-radius 100 --indicator-thickness 15 --font "CaskaydiaCove Nerd Font"
 shred $PICTURE
 rm $PICTURE

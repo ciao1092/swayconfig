@@ -8,6 +8,8 @@ exec nm-applet
 exec wl-paste -t text --watch clipman store
 bindsym Alt+V exec clipman pick -t rofi
 
+exec bash -c "kwallet-query -r KeePassXC kdewallet | keepassxc --pw-stdin /home/carlo/passwords/Passwords.kdbx"
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -20,7 +22,9 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term alacritty
+#set $term alacritty
+set $term konsole --hide-menubar --hide-toolbars
+#set $term gnome-terminal
 
 # Your preferred application launcher
 #set $menu wmenu-run
@@ -29,4 +33,3 @@ set $menu "rofi -show drun -show-icons"
 
 include ~/.config/sway/config.d/*.config
 include /etc/sway/config.d/*
-
