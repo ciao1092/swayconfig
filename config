@@ -1,14 +1,19 @@
 # Read `man 5 sway` for a complete reference.
 
+exec lxpolkit
 exec --no-startup-id ~/.config/sway/scripts/start_keyring.sh
-
 exec blueman-applet
 exec nm-applet
+
+exec flatpak run io.github.martchus.syncthingtray --wait
 
 exec wl-paste -t text --watch clipman store
 bindsym Alt+V exec clipman pick -t rofi
 
 exec bash -c "kwallet-query -r KeePassXC kdewallet | keepassxc --pw-stdin /home/carlo/passwords/Passwords.kdbx"
+
+# KeePassXC
+for_window [app_id="org.keepassxc.KeePassXC"] floating enable
 
 ### Variables
 #
